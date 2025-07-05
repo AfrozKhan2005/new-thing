@@ -1,72 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MicroLearn Welcome</title>
-  <link href="https://github.com/AfrozKhan2005/new-thing/blob/main/micro%20learn%20logo.png?raw=true" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - MicroLearn</title>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      height: 100vh;
-      background: linear-gradient(to right, #fdf6e3, #fcefe8);
+      margin: 0;
       font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      color: #333;
     }
 
-    .logo {
+    .logo-section {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(145deg, #f3e5f5, #e8eaf6);
+      border-bottom: 5px solid #7c3aed;
+    }
+
+    .big-logo {
+      width: 320px;
       max-width: 90%;
-      width: 500px;
-      height: auto;
-      animation: fadeIn 1.5s ease-in-out;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: popIn 1s ease;
     }
 
     .proceed-button {
-      margin-top: 30px;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      background: linear-gradient(to right, #4f46e5, #7c3aed);
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #f59e0b, #f43f5e);
       color: white;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
       transition: all 0.3s ease;
     }
 
     .proceed-button:hover {
+      background: linear-gradient(135deg, #f43f5e, #f59e0b);
       transform: scale(1.05);
-      background: linear-gradient(to right, #7c3aed, #4f46e5);
+    }
+
+    .welcome-text {
+      margin-top: 3rem;
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #4f46e5, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Pacifico', cursive;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <a href="home.html">
-    <button class="proceed-button">Proceed</button>
-  </a>
+  <section class="logo-section">
+    <img src="https://github.com/AfrozKhan2005/my-website/blob/main/micro%20learn%20logo.png?raw=true" alt="micro learn logo" class="big-logo">
+    <br><a href="https://github.com/AfrozKhan2005/my-website/blob/main/micro%20learn.html" target="_blank">
+    <a href="micro learn.html" class="proceed-button">Proceed</a>
+    <div class="welcome-text">Welcome to MicroLearn</div>
+  </section>
 
 </body>
 </html>
-
