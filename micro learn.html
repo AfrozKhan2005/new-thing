@@ -4,19 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MicroLearn - Bite-Sized Learning</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: #f5f7fa;
       color: #333;
     }
 
     header {
-      background: #4f46e5;
+      background: linear-gradient(to right, #4f46e5, #7c3aed);
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
+      position: relative;
+    }
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  background: 		#facc15; /* New background color */
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.6);
+  animation: float 3s ease-in-out infinite;
+}
+
+ 
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     header h1 {
@@ -26,12 +57,19 @@
 
     header p {
       font-size: 1.2rem;
+      margin: 0.5rem 0;
     }
 
     .section {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #4f46e5;
+      margin-bottom: 1rem;
     }
 
     .courses {
@@ -42,17 +80,27 @@
 
     .card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
       margin-top: 0;
+      color: #4f46e5;
+    }
+
+    .card a {
+      text-decoration: none;
     }
 
     .card p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #555;
     }
 
@@ -66,13 +114,13 @@
     .features ul {
       list-style: none;
       padding: 0;
+      font-size: 1rem;
     }
 
     .features li {
-      margin-bottom: 0.5rem;
+      margin: 0.5rem 0;
     }
 
-    /* Form Styling */
     .cta {
       display: flex;
       justify-content: center;
@@ -84,35 +132,42 @@
     .form-container {
       background-color: white;
       padding: 30px;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
-      width: 300px;
+      width: 320px;
     }
 
-    input[type="text"],
-    input[type="number"],
-    input[type="tel"],
-    input[type="email"] {
-      width: 90%;
-      padding: 8px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    input[type="submit"] {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
+    .cta-button {
+      margin-top: 20px;
+      background: linear-gradient(to right, #facc15, #f59e0b);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 12px 24px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
-      margin-top: 15px;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    input[type="submit"]:hover {
-      background-color: #45a049;
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 2rem;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .logo-text span {
+      background: linear-gradient(to right, #fcd34d, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Pacifico', cursive;
     }
 
     footer {
@@ -127,7 +182,8 @@
 <body>
 
   <header>
-    <h1>MicroLearn</h1>
+    <div class="logo-circle">M</div>
+    <div class="logo-text">Micro<span>Learn</span></div>
     <p>Bite-Sized Learning for Busy Minds</p>
     <p>Start learning today!!</p>
   </header>
@@ -153,27 +209,25 @@
           <p>Boost your C++ skills.</p>
         </a>
       </div>
-  <div class="card">
+      <div class="card">
         <h3>Introduction to CSS</h3>
         <a href="https://www.w3schools.com/css/default.asp" target="_blank">
-          <p>know your CSS skills.</p>
+          <p>Know your CSS skills.</p>
         </a>
       </div>
-  <div class="card">
+      <div class="card">
         <h3>Introduction to CYBER SECURITY</h3>
         <a href="https://www.w3schools.com/cybersecurity/index.php" target="_blank">
-          <p>to know more about CYBER SECURITY .</p>
+          <p>Explore Cyber Security fundamentals.</p>
         </a>
       </div>
-
       <div class="card">
         <h3>Introduction to PYTHON</h3>
         <a href="https://www.w3schools.com/python/default.asp" target="_blank">
-          <p>learn PYTHON .</p>
+          <p>Learn Python programming.</p>
         </a>
       </div>
     </div>
- 
   </section>
 
   <section class="section features">
@@ -182,20 +236,14 @@
       <li>✅ Short 5–15 minute lessons</li>
       <li>✅ Easy to understand</li>
       <li>✅ Learn anywhere, anytime</li>
+      <li>✅ Completely free</li>
     </ul>
   </section>
 
   <section class="cta">
     <div class="form-container">
       <h2>Join for Live Classes</h2>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Enter your name" required><br>
-        <input type="number" name="age" placeholder="Enter your age" required><br>
-        <input type="tel" name="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}" required><br>
-        <input type="text" name="college" placeholder="Enter college name" required><br>
-        <input type="email" name="email" placeholder="Enter email ID" required><br>
-        <input type="submit" value="Submit">
-      </form>
+      <a class="cta-button" href="middle.html" target="_blank">Click Here to Join</a>
     </div>
   </section>
 
